@@ -2,10 +2,11 @@
 %global import_path     github.com/codegangsta/cli
 %global commit          565493f259bf868adb54d45d5f4c68d405117adf
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
+%define gosrc %{go_dir}/src/pkg/%{import_path}
 
 Name:           golang-codegangsta-cli
 Version:        1.2.0
-Release:        1
+Release:        2
 Summary:        Package for building command line apps in Go
 License:        MIT
 URL:            https://%{import_path}
@@ -39,11 +40,11 @@ which use codegangsta/cli.
 %build
 
 %install
-install -d -p %{buildroot}%{go_dir}/src/%{import_path}
-cp -pav *.go %{buildroot}%{go_dir}/src/%{import_path}
+install -d -p %{buildroot}%{gosrc}
+cp -pav *.go %{buildroot}%{gosrc}
 
 %files devel
 %doc LICENSE README.md
 %dir %{go_dir}/src/github.com/codegangsta
 %dir %{go_dir}/src/%{import_path}
-%{go_dir}/src/%{import_path}/*.go
+%{gosrc}/%{import_path}/*.go
