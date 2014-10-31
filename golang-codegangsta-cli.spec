@@ -45,6 +45,4 @@ cp -pav *.go %{buildroot}%{gosrc}
 
 %files devel
 %doc LICENSE README.md
-%dir %{go_dir}/src/github.com/codegangsta
-%dir %{go_dir}/src/%{import_path}
-%{gosrc}/%{import_path}/*.go
+%{gosrc}/
