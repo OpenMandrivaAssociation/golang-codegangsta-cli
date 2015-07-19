@@ -6,7 +6,7 @@
 
 Name:           golang-codegangsta-cli
 Version:        1.2.0
-Release:        3
+Release:        4
 Summary:        Package for building command line apps in Go
 License:        MIT
 URL:            https://%{import_path}
