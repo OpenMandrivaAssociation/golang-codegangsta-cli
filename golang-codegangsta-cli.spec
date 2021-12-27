@@ -2,7 +2,7 @@
 %global import_path     github.com/codegangsta/cli
 %global commit          565493f259bf868adb54d45d5f4c68d405117adf
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%define gosrc %{go_dir}/src/pkg/%{import_path}
+%define gosrc /%{go_dir}/src/pkg/%{import_path}
 
 Name:           golang-codegangsta-cli
 Version:        1.2.0
